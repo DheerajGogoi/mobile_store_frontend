@@ -11,31 +11,33 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import NotFound from './pages/NotFound';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import { useSelector } from 'react-redux';
+import Login from './pages/Login';
+import ViewMobile from './pages/ViewMobile';
+import Register from './pages/Register';
 
 function App() {
+  const auth = useSelector(state => state.userAuth.auth)
+  console.log(auth);
+
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
+    <div className="App-header">
+      <Routes>
+        <Route path="/" element={auth ? <Navigate to="/home" /> : <Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+        {/* protected routes */}
+        <Route path="/home" element={auth ? <Home /> : <Navigate to="/login" />} />
+        <Route path="/home/:mobileId" element={auth ? <ViewMobile /> : <Navigate to="/login" />} />
+        
+        {/* unkown route handle */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
   );
 }
 
