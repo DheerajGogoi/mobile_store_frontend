@@ -16,6 +16,8 @@ These instructions will help you set up and run the project on your local machin
 
 Link to github repository of backend server https://github.com/DheerajGogoi/mobile_store_backend.git
 
+Clone Website [preview link](https://drive.google.com/file/d/1uIS4X1Djef4CN9HEkuLMFdPWy5teXmgP/view?usp=drive_link)
+
 ### Prerequisites
 
 Before you begin, ensure you have the following software installed on your machine:
