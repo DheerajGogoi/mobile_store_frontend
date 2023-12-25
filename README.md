@@ -1,4 +1,4 @@
-# Your React App Name
+# Mobile Ordering App Clone
 
 Welcome to Mobile Ordering App Clone! This project is a offers a smooth experience with diverse options, filtering, and secure JWT authentication.
 
