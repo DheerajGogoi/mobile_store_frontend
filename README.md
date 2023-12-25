@@ -1,4 +1,4 @@
-# Mobile Ordering App Clone
+# Mobile Ordering App UI Clone
 
 Welcome to Mobile Ordering App Clone! This project is a offers a smooth experience with diverse options, filtering, and secure JWT authentication.
 
@@ -13,6 +13,8 @@ Welcome to Mobile Ordering App Clone! This project is a offers a smooth experien
 ## Getting Started
 
 These instructions will help you set up and run the project on your local machine.
+
+Link to github repository of backend server https://github.com/DheerajGogoi/mobile_store_backend.git
 
 ### Prerequisites
 
