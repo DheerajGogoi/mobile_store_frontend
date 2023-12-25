@@ -24,7 +24,7 @@ function App() {
   console.log(auth);
 
   return (
-    <div className="App-header">
+    <>
       <Routes>
         <Route path="/" element={auth ? <Navigate to="/home" /> : <Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
@@ -37,7 +37,7 @@ function App() {
         {/* unkown route handle */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
